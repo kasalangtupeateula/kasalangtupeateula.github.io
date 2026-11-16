@@ -19,6 +19,35 @@
 }
 
 /* ========================================
+   CSS VARIABLES v3.0
+   ======================================== */
+:root {
+    /* Typography Colors */
+    --primary-text: #faeab1;
+    --secondary-text: #f9eab0;
+    --light-text: #f5e6d3;
+    --white-text: #ffffff;
+    --cream-text: #fdf3d4;
+    --accent-gold: #e8d4b8;
+    --accent-muted: #d4c4b4;
+    
+    /* Background & Overlay Colors */
+    --bg-dark: #444638;
+    --bg-overlay: rgba(68, 70, 56, 0.3);
+    --bg-overlay-light: rgba(68, 70, 56, 0.15);
+    
+    /* Shadow & Depth */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-gold: rgba(232, 212, 184, 0.2);
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --transition-slow: 0.8s ease;
+}
+
+/* ========================================
    GLOBAL STYLES
    ======================================== */
 * {
@@ -38,11 +67,12 @@ body {
     background-attachment: scroll;
     background-position: center top;
     background-size: cover;
-    color: #faeab1;
+    color: var(--primary-text);
     line-height: 1.8;
     overflow-x: hidden;
-    background-color: #444638;
+    background-color: var(--bg-dark);
     background-size: 120%;
+    will-change: background-color;
 }
 
 body::before {
@@ -52,10 +82,10 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(68, 70, 56, 0.3);
+    background-color: var(--bg-overlay);
     pointer-events: none;
     z-index: -1;
-    transition: background-color 0.8s ease;
+    transition: background-color var(--transition-slow);
 }
 
 .container {
@@ -92,36 +122,37 @@ img {
     height: auto;
     object-fit: contain;
 }
-h1, h2,h3{
+h1, h2, h3 {
     font-family: 'Qwerty Ability - Personal Use';
     font-weight: normal;
     font-style: normal;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px var(--shadow-dark), 1px 1px 2px var(--shadow-dark);
 }
-h1{
+h1 {
     font-size: 6rem;
-    line-height:5.5rem;
+    line-height: 5.5rem;
     margin-bottom: 2rem;
 }
-h2{
+h2 {
     font-size: 5rem;
-    color: #f9eab0;
+    color: var(--secondary-text);
     margin-bottom: 2rem;
 }
-h3{
+h3 {
     font-size: 4rem;
 }
 a {
     text-decoration: none;
-    color: #fdf3d4;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: var(--cream-text);
+    text-shadow: 1px 1px 2px var(--shadow-dark);
+    transition: color var(--transition-fast);
 }
-p{
+p {
     line-height: 1.2;
-    color: white;
-    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+    color: var(--white-text);
+    text-shadow: 1px 3px 6px var(--shadow-light);
 }
-p , a {
+p, a {
     font-family: "Sitka Text", 'Sitka Small 815', Sitka, Georgia, serif;
     font-weight: normal;
     font-style: italic;
@@ -143,19 +174,17 @@ p , a {
 }
 .invitation-title {
     font-size: 1.8rem;
-    /* font-style: italic; */
-    /* color: #e8d4b8; */
     margin-bottom: 15px;
 }
 
 .invitation-date {
     font-size: 1.1rem;
-    color: #f5e6d3;
+    color: var(--light-text);
     margin-bottom: 15px;
     line-height: 1.8;
 }
-.invitation-date p{
-    color: white;
+.invitation-date p {
+    color: var(--white-text);
 }
 
 /* ========================================
@@ -176,20 +205,20 @@ p , a {
 .event-label {
     font-size: 1.3rem;
     font-style: italic;
-    color: #e8d4b8;
+    color: var(--accent-gold);
     margin-bottom: 10px;
 }
 
 .event-details {
     font-size: 0.95rem;
-    color: #f5e6d3;
+    color: var(--light-text);
     line-height: 1.6;
     min-height: 96px;
 }
 
 .event-time {
     font-weight: bold;
-    color: #e8d4b8;
+    color: var(--accent-gold);
     margin-top: 10px;
 }
 
@@ -216,21 +245,28 @@ p , a {
     padding: 25px 20px;
     border-radius: 10px;
     margin-bottom: 30px;
-    border: 2px solid rgba(232, 212, 184, 0.2);
+    border: 2px solid var(--shadow-gold);
+    transition: all var(--transition-fast);
+}
+
+.gallery-link-section:hover {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(232, 212, 184, 0.4);
+    transform: translateY(-2px);
 }
 
 .gallery-link {
     font-size: 1.3rem;
     font-style: italic;
-    color: #e8d4b8;
+    color: var(--accent-gold);
     margin-bottom: 15px;
     text-align: center;
 }
 
 .gallery-link a {
-    color: #e8d4b8;
+    color: var(--accent-gold);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition-fast);
 }
 
 .gallery-link a:hover {
@@ -270,13 +306,15 @@ p , a {
     position: relative;
     display: inline-block;
     text-decoration: underline;
+    transition: all var(--transition-fast);
 }
 .rsvp-section .page-link a {
-    color: #ffffff;
+    color: var(--white-text);
 }
 
 .page-link a:hover {
-    color: #ffffff;
+    color: var(--white-text);
+    text-shadow: 0 0 8px rgba(232, 212, 184, 0.3);
 }
 
 /* .page-link a:hover::after {
@@ -294,20 +332,20 @@ p , a {
 .dress-title {
     font-size: 1.8rem;
     font-style: italic;
-    color: #e8d4b8;
+    color: var(--accent-gold);
     margin-bottom: 20px;
 }
 
 .dress-description {
     font-size: 0.95rem;
-    color: #f5e6d3;
+    color: var(--light-text);
     margin-bottom: 20px;
     line-height: 1.7;
 }
 
 .dress-note {
     font-size: 0.85rem;
-    color: #d4c4b4;
+    color: var(--accent-muted);
     font-style: italic;
 }
 
@@ -354,13 +392,13 @@ p , a {
 .rsvp-title {
     font-size: 1.8rem;
     font-style: italic;
-    color: #e8d4b8;
+    color: var(--accent-gold);
     margin-bottom: 15px;
 }
 
 .rsvp-instructions {
     font-size: 0.95rem;
-    color: #f5e6d3;
+    color: var(--light-text);
     line-height: 1.7;
 }
 
@@ -667,6 +705,7 @@ grid-row-start: 2;
 
 /* 4. Tablet (max-width: 768px) */
 @media (max-width: 768px) {
+    h1 { font-size: 4rem; line-height: 3.5rem; }
     h2 { font-size: 4rem; }
     h3 { font-size: 2.5rem; }
     p, a { font-size: 1.3rem; }
@@ -692,6 +731,7 @@ grid-row-start: 2;
 
 /* 5. Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+    h1 { font-size: 3rem; line-height: 2.5rem; }
     h2 {font-size: 3rem;margin-bottom: 3rem;line-height: 2.5rem;}
     h3 {font-size: 2.5rem;}
     p, a { font-size: 1.1rem; }
