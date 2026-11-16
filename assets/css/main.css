@@ -92,11 +92,16 @@ img {
     height: auto;
     object-fit: contain;
 }
-h2,h3{
+h1, h2,h3{
     font-family: 'Qwerty Ability - Personal Use';
     font-weight: normal;
     font-style: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+h1{
+    font-size: 6rem;
+    line-height:5.5rem;
+    margin-bottom: 2rem;
 }
 h2{
     font-size: 5rem;
@@ -262,7 +267,6 @@ p , a {
 .page-link a {
     color: #fbf3d2;
     cursor: pointer;
-    font-size: 1.5rem;
     position: relative;
     display: inline-block;
     text-decoration: underline;
@@ -305,6 +309,13 @@ p , a {
     font-size: 0.85rem;
     color: #d4c4b4;
     font-style: italic;
+}
+
+.dress-code-image {
+    display: block;
+    width: min(100%, 1200px);
+    height: auto;
+    margin: 2rem auto 0;
 }
 
 /* ========================================
@@ -632,8 +643,6 @@ grid-row-start: 2;
 @media (max-width: 1440px) {
     h2 {font-size: 6rem;margin-bottom: 2.5rem;line-height: 6rem;}
     h3 { font-size: 3.5rem; }
-    p, a { font-size: 2rem; }
-    .invitation-date p { font-size: 2.5em; }
     .section { margin: 3rem 6%; }
 }
 

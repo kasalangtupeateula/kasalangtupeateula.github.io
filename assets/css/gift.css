@@ -30,9 +30,13 @@
 }
 
 .gift-headline {
-    object-fit: contain;
+    font-weight: 400;
+    color: #faeab1;
+    text-align: center;
     max-width: 800px;
     width: 100%;
+    margin: 0;
+    font-style: italic;
 }
 
 /* ========================================
@@ -74,8 +78,8 @@
    GIFT QR BOX
    ======================================== */
 .gift-qr-box {
-    width: 300px;
-    height: 300px;
+    width: 420px;
+    height: 420px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -112,6 +116,8 @@
     
     .gift-headline {
         max-width: 85%;
+        font-size: 3.5rem;
+        line-height: 3rem;
     }
     
     .gift-content-container {
@@ -124,8 +130,8 @@
     }
 
     .gift-qr-box {
-        width: 240px;
-        height: 240px;
+        width: 340px;
+        height: 340px;
     }
 
     .gift-qr-text {
@@ -154,8 +160,8 @@
     }
 
     .gift-qr-box {
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
     }
 
     .gift-qr-text {
