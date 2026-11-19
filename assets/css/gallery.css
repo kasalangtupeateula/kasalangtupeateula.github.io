@@ -337,7 +337,7 @@ p.larawan-subtitle.photographer {
         font-size: 3rem;
         padding-left: 0;
         margin-bottom: 1.5rem;
-        max-width: 360px;
+        max-width: 350px;
     }
     .larawan-header h1 span {
             top: 1.75rem;
@@ -396,7 +396,7 @@ p.larawan-subtitle.photographer {
     }
 
     .larawan-header h1 {
-        font-size: 2.75rem;
+        /* font-size: 2.75rem; */
     }
 
     .larawan-headline {

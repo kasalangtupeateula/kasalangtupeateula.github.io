@@ -236,6 +236,9 @@ p, a {
 .love-story.section img, .color-palette-section img, .rsvp-section img {
     max-width: initial;
 }
+.color-palette-section img{
+    max-width: 850px;
+}
 
 /* ========================================
    GALLERY LINK SECTION
@@ -679,7 +682,6 @@ grid-row-start: 2;
 
 /* 2. Laptop L (max-width: 1440px) */
 @media (max-width: 1440px) {
-    h2 {font-size: 6rem;margin-bottom: 2.5rem;line-height: 6rem;}
     h3 { font-size: 3.5rem; }
     .section { margin: 3rem 6%; }
 }
@@ -731,7 +733,6 @@ grid-row-start: 2;
 
 /* 5. Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-    h1 { font-size: 3rem; line-height: 2.5rem; }
     h2 {font-size: 3rem;margin-bottom: 3rem;line-height: 2.5rem;}
     h3 {font-size: 2.5rem;}
     p, a { font-size: 1.1rem; }
