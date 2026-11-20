@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     
     if (homeLink && !isLocalhost) {
-        homeLink.setAttribute('href', 'https://kasalangeulaattupe.github.io');
+        homeLink.setAttribute('href', 'https://kasalangtupeateula.github.io');
     }
     
     // Remove .html extension from links on non-localhost only
