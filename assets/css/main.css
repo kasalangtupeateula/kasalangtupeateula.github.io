@@ -311,9 +311,9 @@ p, a {
     text-decoration: underline;
     transition: all var(--transition-fast);
 }
-.rsvp-section .page-link a {
+/* .rsvp-section .page-link a {
     color: var(--white-text);
-}
+} */
 
 .page-link a:hover {
     color: var(--white-text);
